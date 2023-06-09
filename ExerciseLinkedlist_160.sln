@@ -5,6 +5,12 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExerciseLinkedlist_160", "ExerciseLinkedlist_160\ExerciseLinkedlist_160.vcxproj", "{1816EC5B-0CAA-4B13-B206-89AFDC76D40C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C2A6F14-3252-482D-9F21-2FB3AFC3ACBF}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doublelinkedlist_!60\Doublelinkedlist_!60\Doublelinkedlist_!60.cpp = ..\Doublelinkedlist_!60\Doublelinkedlist_!60\Doublelinkedlist_!60.cpp
+		..\..\Daprog\nCap\nCap\nCap.cpp = ..\..\Daprog\nCap\nCap\nCap.cpp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
