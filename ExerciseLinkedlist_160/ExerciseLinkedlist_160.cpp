@@ -27,7 +27,7 @@ void CircularLinkedList::addNode(int rollno, string name) { //write your answer 
 
 	// Menambah node diawal list
 	if (LAST == NULL) {
-		newNode->next = LAST;	//node baru menunjuk node terakhir
+		newNode->next = LAST->next;	//node baru menunjuk node terakhir
 		LAST->next = newNode;	//node terakhir menunjuk node baru
 	}
 
