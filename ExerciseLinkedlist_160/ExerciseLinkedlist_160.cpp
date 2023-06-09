@@ -15,15 +15,15 @@ public:
 		LAST = NULL;
 	}
 	void addNode(int rollno, string name);
-	bool search(int rollno, Node** previous, Node** current);
+	bool search(int rollno, Node** ADITYA, Node** ERSA);
 	bool listEmpty();
 	bool delNode(int rollno, string name);
 	void traverse();
 };
 void CircularLinkedList::addNode(int rollno, string name) { //write your answer here
-	Node* newNode = new Node;
-	newNode->rollNumber = rollno;
-	newNode->name = name;
+	Node* newNode = new Node;			//Allocate memory for new node
+	newNode->rollNumber = rollno;		//Assign Value to new node
+	newNode->name = name;				//Assign Value to new node
 
 	// Menambah node diawal list
 	if (LAST == NULL) {
@@ -32,11 +32,11 @@ void CircularLinkedList::addNode(int rollno, string name) { //write your answer 
 	}
 
 	// Menambah node diantara node lainnya
-	Node* current = LAST->next;          //Current pointer menunjuk node pertama
-	Node* previous = NULL;
-	while (current->next->rollNumber < rollno) {   // B.3 Perulangan
-		LAST = current;					 //Previous pointer menujuk node pertama
-		current = current->next;		   //Current pointer maju satu node
+	Node* ERSA = LAST->next;          //Current pointer menunjuk node pertama
+	Node* ADITYA = NULL;
+	while (ERSA->next->rollNumber < rollno) {   // B.3 Perulangan
+		LAST = ERSA;					 //Previous pointer menujuk node pertama
+		ERSA = ERSA->next;		   //Current pointer maju satu node
 	};
 
 	// Menambah pada bagian akhir list
@@ -47,15 +47,15 @@ void CircularLinkedList::addNode(int rollno, string name) { //write your answer 
 }
 
 
-bool CircularLinkedList::search(int rollno, Node** previous, Node** current) {
-	*previous = LAST->next;
-	*current = LAST->next;
-	while (*current != LAST) {
-		if (rollno == (*current)->rollNumber) {
+bool CircularLinkedList::search(int rollno, Node** ADITYA, Node** ERSA) {
+	*ADITYA = LAST->next;
+	*ERSA = LAST->next;
+	while (*ERSA != LAST) {
+		if (rollno == (*ERSA)->rollNumber) {
 			return true;
 		}
-		*previous = *current;
-		*current = (*current)->next;
+		*ADITYA = *ERSA;
+		*ERSA = (*ERSA)->next;
 	}
 	if (rollno == LAST->rollNumber) {
 		return true;
